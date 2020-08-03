@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,KAAM;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,IAAI",
+"mappings": "AAAA,KAAM;EACJ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,IAAI",
 "sources": ["Quiz.module.scss"],
 "names": [],
 "file": "Quiz.module.css"

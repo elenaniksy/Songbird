@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import classes from './Quiz.module.scss';
+import BirdAudioPlayer from '../../components/BirdAudioPlayer/BirdAudioPlayer';
 
-class Quiz extends Component {
-    render() {
-        return (
-            <div className={classes.Quiz}>
-                {this.props.children}
-            </div>
-
-        )
-    }
+const Quiz = props => {
+    return (
+        <div className={classes.Quiz}>
+           <BirdAudioPlayer
+            birdsType={props.birdsType}
+           />
+        </div>
+    )
 }
+
 
 export default Quiz;

@@ -1,14 +1,24 @@
 import React, {Component} from "react";
 import classes from './Header.module.scss';
+import Navigation from "../../components/Navigation/Navigation";
+
+const topLogo = <img src={'https://birds-quiz.netlify.app/static/media/logo.4f82cd73.svg'} alt={'main logo'}/>;
 
 class Header extends Component {
+
     render() {
         return (
             <div className={classes.Header}>
                 <div className={classes.topPanel}>
-                    <div className={classes.logo}>v</div>
-                    <h5>Score: 5 из 30</h5>
+                    <div className={classes.logo}>
+                        {topLogo}
+                    </div>
+                    <h5>Score: {this.props.score}</h5>
                 </div>
+
+                <Navigation
+                    birdsType={this.props.birdsType}
+                />
 
 
             </div>

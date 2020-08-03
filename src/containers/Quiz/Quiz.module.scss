@@ -1,7 +1,7 @@
 .Quiz {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
-  width: 100%;
-  background-color: #222;
+  max-width: 1000px;
+  margin-top: 30px;
 }

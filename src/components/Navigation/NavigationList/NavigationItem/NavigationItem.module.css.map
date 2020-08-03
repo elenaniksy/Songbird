@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACd,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,SAAS;EAClB,IAAI,EAAE,IAAI;;AAIZ,sBAAuB;EACrB,gBAAgB,EAAE,OAAO;;AAI3B,wBAAyB;EACvB,gBAAgB,EAAE,OAAO",
+"sources": ["NavigationItem.module.scss"],
+"names": [],
+"file": "NavigationItem.module.css"
+}

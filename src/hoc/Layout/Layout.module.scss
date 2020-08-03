@@ -1,7 +1,13 @@
+
 .Layout {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 .Layout main {

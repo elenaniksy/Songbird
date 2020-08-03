@@ -1,0 +1,31 @@
+.BirdAudioPlayer {
+  color: #fff;
+  background-color: #303030;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.BirdAudioPlayer .Image {
+  width: 100%;
+  max-width: 200px;
+
+}
+
+.BirdAudioPlayer .Player {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 80vw;
+}
+
+.BirdAudioPlayer .Player > ul {
+  list-style: none;
+}
+
+.BirdAudioPlayer h3 {
+  font-size: 25px;
+}
+
