@@ -18,9 +18,15 @@
   width: 80vw; }
 
 .BirdAudioPlayer .Player > ul {
-  list-style: none; }
+  list-style: none;
+  margin: 10px; }
+
+.BirdAudioPlayer .Player li:nth-child(1) {
+  border-bottom: 1px solid #fff; }
 
 .BirdAudioPlayer h3 {
-  font-size: 25px; }
+  font-size: 22px;
+  font-weight: 300;
+  padding: 0 10px 20px; }
 
 /*# sourceMappingURL=BirdAudioPlayer.module.css.map */
