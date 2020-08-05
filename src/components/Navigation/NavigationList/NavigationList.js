@@ -5,7 +5,6 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 const NavigationList = props => {
     return (
         <ul className={classes.NavigationList}>
-            {/*{console.log(props)}*/}
             {props.birdsType.map((item, index) => {
                 return (
                     <NavigationItem
