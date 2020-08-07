@@ -24,7 +24,10 @@ class Quiz extends Component {
                         birds={this.props.birdsType}
                         randomItem={this.getRandomItem()}
                     />
-                     <ActiveQuiz/>
+                     <ActiveQuiz
+                         activeSection={this.state.activeSection}
+                         score={this.state.score}
+                     />
                 </div>
             )
         }
