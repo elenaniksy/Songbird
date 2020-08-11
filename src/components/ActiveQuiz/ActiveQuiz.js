@@ -8,17 +8,19 @@ const ActiveQuiz = props => {
     return (
         <div className={classes.ActiveQuiz}>
             {/*1. Блок со списком птиц*/}
-            {/*2. Блок карточка*/}
+
             <QuizList
-            birds={props.activeSection.birds}
+            activeSection={props.activeSection.birds}
             onAnswerClick={props.onAnswerClick}
             randomItem={props.randomItem}
             answerState={props.answerState}
             />
+
+            {/*2. Блок карточка*/}
+
             <QuizCard
                 result={props.result}
             />
-
         </div>
     )
 }
