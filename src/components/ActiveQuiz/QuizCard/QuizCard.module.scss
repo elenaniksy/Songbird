@@ -1,15 +1,57 @@
 .QuizCard {
-  display: flex;
-  flex-grow: 1;
   margin: 15px 0 15px 15px;
   background-color: #303030;
   color: #fff;
   border-radius: 10px;
   border: 1px solid #444;
   font-weight: lighter;
+  flex-basis: 50%;
+}
+
+.QuizCard .ActiveQuizCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 15px;
 }
 
 .QuizCard >p {
   padding: 15px;
 }
+
+.QuizCard .Image {
+  padding: 15px 15px 0 0 ;
+}
+
+.QuizCard .Image > img {
+  width: 100%;
+}
+
+.QuizCard .Information {
+  width: 20vw;
+}
+
+.QuizCard .Information .Header {
+ border-bottom: 1px solid #444;
+  font-size: 19px;
+}
+
+.QuizCard .Information .Latin {
+ border-bottom: 1px solid #444;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.QuizCard .Information > audio {
+  max-width: 15vw;
+}
+
+.Description {
+  padding: 15px;
+}
+
+
+
+
 

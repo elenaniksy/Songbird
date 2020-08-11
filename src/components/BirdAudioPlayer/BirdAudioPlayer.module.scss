@@ -13,6 +13,11 @@
   max-width: 200px;
 }
 
+.BirdAudioPlayer .Image > img{
+  width: 200px;
+}
+
+
 .BirdAudioPlayer .Player {
   display: flex;
   flex-direction: column;
@@ -23,7 +28,7 @@
 
 .BirdAudioPlayer .Player > ul {
   list-style: none;
-  margin: 10px;
+  margin: 0 20px;
 }
 
 .BirdAudioPlayer .Player li:nth-child(1) {

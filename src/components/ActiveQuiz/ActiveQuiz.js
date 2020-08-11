@@ -4,16 +4,20 @@ import QuizList from "./QuizList/QuizList";
 import QuizCard from "./QuizCard/QuizCard";
 
 const ActiveQuiz = props => {
+
     return (
         <div className={classes.ActiveQuiz}>
             {/*1. Блок со списком птиц*/}
             {/*2. Блок карточка*/}
             <QuizList
             birds={props.activeSection.birds}
+            onAnswerClick={props.onAnswerClick}
+            randomItem={props.randomItem}
+            answerState={props.answerState}
             />
             <QuizCard
+                result={props.result}
             />
-
 
         </div>
     )

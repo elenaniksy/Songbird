@@ -10,7 +10,11 @@ const QuizList = props => {
                     return (
                         <QuizItem
                         key={index}
+                        birdItem={item}
                         name={item.name}
+                        randomItem={props.randomItem}
+                        onAnswerClick={props.onAnswerClick}
+                        answerState={props.answerState ? props.answerState[item.name]: null}
                         />
                     )
                 })

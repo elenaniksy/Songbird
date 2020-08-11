@@ -19,3 +19,11 @@
   transition: background .3s ease-in-out;
 }
 
+.QuizItem.success {
+  background-color: #00BC8C;
+}
+
+.QuizItem.error {
+  background: #D62C1A;
+}
+
