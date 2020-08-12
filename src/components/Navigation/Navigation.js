@@ -7,6 +7,7 @@ const Navigation = props => {
         <div className={classes.Navigation}>
             <NavigationList
             birdsType={props.birdsType}
+            sectionIndex={props.sectionIndex}
             />
         </div>
 

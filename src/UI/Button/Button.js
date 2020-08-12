@@ -7,18 +7,14 @@ const Button = props => {
         classes[props.rigthAnswer]
     ]
 
-    const nextLevelHandler = () => {
-
-    }
-
     return (
         <button
             type={'success'}
             className={cls.join(' ')}
-            onclick={nextLevelHandler()}
+            onClick={props.nextLevel}
 
         >
-            Next Level
+            {props.children}
         </button>
     )
 }

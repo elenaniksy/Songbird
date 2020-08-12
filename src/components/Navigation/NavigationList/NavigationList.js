@@ -9,13 +9,13 @@ const NavigationList = props => {
                 return (
                     <NavigationItem
                     key={index}
+                    itemIndex={index}
                     active={item.active}
                     type={item.type}
+                    sectionIndex={props.sectionIndex}
                     />
                 )
             }) }
-
-
         </ul>
     )
 }

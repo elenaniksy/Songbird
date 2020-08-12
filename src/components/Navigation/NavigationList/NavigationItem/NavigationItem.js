@@ -4,7 +4,7 @@ import classes from './NavigationItem.module.scss';
 const NavigationItem = props => {
     const cls = [classes.NavigationItem];
 
-    if(props.active) {
+    if(props.sectionIndex === props.itemIndex) {
         cls.push(classes.active)
     } else {
         cls.push(classes.unActive)

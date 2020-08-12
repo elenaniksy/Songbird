@@ -19,6 +19,7 @@ const Header = props => {
 
                 <Navigation
                     birdsType={props.birdsType}
+                    sectionIndex={props.sectionIndex}
                 />
             </div>
         )

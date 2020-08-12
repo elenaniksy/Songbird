@@ -9,7 +9,6 @@ class Layout extends Component {
             birdsType: [
                 {
                     type: 'Разминка',
-                    active: true,
                     id: 1,
                     birds: [
                         {
@@ -65,7 +64,6 @@ class Layout extends Component {
                 },
                 {
                     type: 'Воробьиные',
-                    active: false,
                     id: 2,
                     birds: [
                         {
@@ -120,7 +118,6 @@ class Layout extends Component {
                 },
                 {
                     type: 'Лесные птицы',
-                    active: false,
                     id: 3,
                     birds: [
                         {
@@ -176,7 +173,6 @@ class Layout extends Component {
                 },
                 {
                     type: 'Певчие птицы',
-                    active: false,
                     id: 4,
                     birds: [ //[{id, bird}]
                         {
@@ -231,7 +227,6 @@ class Layout extends Component {
                 },
                 {
                     type: 'Хищные птицы',
-                    active: false,
                     id: 5,
                     birds: [ //[{id, bird}]
                         {
@@ -287,7 +282,6 @@ class Layout extends Component {
                 },
                 {
                     type: 'Морские птицы',
-                    active: false,
                     id: 6,
                     birds: [
                         {
@@ -344,33 +338,15 @@ class Layout extends Component {
         }
     }
 
-    activeSectionHandler = () => {
-        let activeSection = null;
-
-
-        this.state.birdsType.map((item) => {
-            if(item.active) {
-                activeSection = item;
-
-            } else {
-                return null;
-            }
-            return activeSection;
-        });
-        return activeSection;
-    }
-    getRandomNumber = () => {
-        const tmp = this.activeSectionHandler();
-        return Math.floor(Math.random() * tmp.birds.length);
-    }
+    getRandomNumber = () => Math.floor(Math.random() * 6);
 
         render() {
         return (
             <div className={classes.Layout}>
                 <Quiz
                     birdsType={this.state.birdsType}
-                    activeSection={this.activeSectionHandler()}
                     randomNumber={this.getRandomNumber()}
+
                 />
                 <main />
             </div>

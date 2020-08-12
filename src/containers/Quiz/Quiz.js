@@ -4,24 +4,26 @@ import BirdAudioPlayer from '../../components/BirdAudioPlayer/BirdAudioPlayer';
 import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 import Button from "../../UI/Button/Button";
 import Header from "../Header/Header";
+import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
 
 class Quiz extends Component {
+
     constructor (props) {
         super(props);
         this.state = {
             birdsType: this.props.birdsType,
-            isFinished: false,
+            isFinished: true,
+            maxScore: 30,
             score: 0,
             points: 5,
-            activeSection: this.props.activeSection,
-            randomItem: this.props.activeSection.birds[this.props.randomNumber],
-            randomNumber: this.props.randomNumber,
+            activeSectionIndex: 0,
+            activeSection: this.props.birdsType[0],
+            randomItem: this.props.birdsType[0].birds[Math.floor(Math.random() * 6)],
             answerState: null, //{[name]: 'success' Vs 'error'}
-            result: null,
+            result: null, // {[key] : bird property},
             rightAnswer: false,
         }
     }
-
 
     onAnswerClickHandler = (answerName, birdItem) => {
         if(!this.state.rightAnswer) {
@@ -57,38 +59,70 @@ class Quiz extends Component {
                 });
             }
         } else {
-
             return;
+        }
+    }
+    nextLevelHandler = () => {
+        if(this.state.rightAnswer) {
+            this.setState({
+                activeSectionIndex: this.state.activeSectionIndex + 1,
+                activeSection: this.state.birdsType[this.state.activeSectionIndex + 1],
+                rightAnswer: false,
+                result: null,
+                answerState: null,
+                randomItem: this.state.birdsType[this.state.activeSectionIndex + 1].birds[Math.floor(Math.random() * 6)],
+                points: 5,
+            });
         }
 
     }
 
         render() {
+
             return (
                 <div className={classes.Quiz}>
                     <Header
-                        activeSection={this.state.activeSection}
                         birdsType={this.props.birdsType}
                         score={this.state.score}
+                        sectionIndex={this.state.activeSectionIndex}
                     />
 
-                    <BirdAudioPlayer
-                        birds={this.props.birdsType}
-                        randomItem={this.state.randomItem}
-                        result={this.state.result}
-                        rightAnswer={this.state.rightAnswer}
-                    />
+                    {
+                        this.state.isFinished ?
+                            <FinishedQuiz
+                                score={this.state.score}
+                                maxscore={this.state.maxScore}
+                                rightAnswer={this.state.rightAnswer}
+                            /> :
+                          <div>
+                            <BirdAudioPlayer
+                            birds={this.props.birdsType}
+                            randomItem={this.state.randomItem}
+                            result={this.state.result}
+                            rightAnswer={this.state.rightAnswer}
+                            />
 
-                     <ActiveQuiz
-                         activeSection={this.state.activeSection}
-                         randomItem={this.state.randomItem}
-                         onAnswerClick={this.onAnswerClickHandler}
-                         answerState={this.state.answerState}
-                         result={this.state.result}
-                     />
-                     <Button
-                         rigthAnswer={this.state.rightAnswer}
-                     />
+                            <ActiveQuiz
+                            activeSection={this.state.activeSection}
+                            randomItem={this.state.randomItem}
+                            onAnswerClick={this.onAnswerClickHandler}
+                            answerState={this.state.answerState}
+                            result={this.state.result}
+                            />
+
+                            <Button
+                            rigthAnswer={this.state.rightAnswer}
+                            nextLevel={this.nextLevelHandler}
+                            > Next Level
+                            </Button>
+                          </div>
+                    }
+
+
+
+
+
+
                 </div>
 
             )
