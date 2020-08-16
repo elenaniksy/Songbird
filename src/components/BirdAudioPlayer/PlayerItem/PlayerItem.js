@@ -7,7 +7,8 @@ const PlayerItem = props => {
         <audio
             className={classes.PlayerItem}
             src={props.randomLink}
-            controls >
+            controls
+        >
         </audio>
     )
 }

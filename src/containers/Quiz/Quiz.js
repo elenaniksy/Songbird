@@ -12,7 +12,7 @@ class Quiz extends Component {
         super(props);
         this.state = {
             birdsType: this.props.birdsType,
-            isFinished: true,
+            isFinished: false,
             maxScore: 30,
             score: 0,
             points: 5,
@@ -22,12 +22,12 @@ class Quiz extends Component {
             answerState: null, //{[name]: 'success' Vs 'error'}
             result: null, // {[key] : bird property},
             rightAnswer: false,
+            currentTime: 0
         }
     }
 
     onAnswerClickHandler = (answerName, birdItem) => {
         if(!this.state.rightAnswer) {
-
             this.setState({
                 points: this.state.points - 1,
             });
@@ -62,19 +62,44 @@ class Quiz extends Component {
             return;
         }
     }
+
     nextLevelHandler = () => {
-        if(this.state.rightAnswer) {
+        if(!this.isQuizFinished()) {
+            if(this.state.rightAnswer) {
+                this.setState({
+                    activeSectionIndex: this.state.activeSectionIndex + 1,
+                    activeSection: this.state.birdsType[this.state.activeSectionIndex + 1],
+                    rightAnswer: false,
+                    result: null,
+                    answerState: null,
+                    randomItem: this.state.birdsType[this.state.activeSectionIndex + 1].birds[Math.floor(Math.random() * 6)],
+                    points: 5,
+                });
+            }
+        } else {
             this.setState({
-                activeSectionIndex: this.state.activeSectionIndex + 1,
-                activeSection: this.state.birdsType[this.state.activeSectionIndex + 1],
-                rightAnswer: false,
-                result: null,
-                answerState: null,
-                randomItem: this.state.birdsType[this.state.activeSectionIndex + 1].birds[Math.floor(Math.random() * 6)],
-                points: 5,
+               isFinished: true
             });
         }
 
+    }
+
+    isQuizFinished () {
+        return this.state.activeSectionIndex + 1 === this.state.birdsType.length;
+    }
+
+    retryHandler = () => {
+        this.setState({
+            isFinished: false,
+            score: 0,
+            points: 5,
+            activeSectionIndex: 0,
+            activeSection: this.state.birdsType[0],
+            randomItem: this.state.birdsType[0].birds[Math.floor(Math.random() * 6)],
+            answerState: null,
+            result: null,
+            rightAnswer: false,
+        });
     }
 
         render() {
@@ -93,6 +118,7 @@ class Quiz extends Component {
                                 score={this.state.score}
                                 maxscore={this.state.maxScore}
                                 rightAnswer={this.state.rightAnswer}
+                                onRetry={this.retryHandler()}
                             /> :
                           <div>
                             <BirdAudioPlayer
@@ -100,6 +126,7 @@ class Quiz extends Component {
                             randomItem={this.state.randomItem}
                             result={this.state.result}
                             rightAnswer={this.state.rightAnswer}
+                            audioTime={this.state.currentTime}
                             />
 
                             <ActiveQuiz

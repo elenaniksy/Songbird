@@ -1,7 +1,8 @@
 .NavigationItem {
   border-radius: 5px;
   padding: 10px 20px;
-  flex: auto; }
+  flex: auto;
+  text-align: center; }
 
 .NavigationItem.active {
   background-color: #00BC8C; }

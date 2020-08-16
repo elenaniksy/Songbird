@@ -71,7 +71,7 @@ class Layout extends Component {
                             latin: 'Passer domesticus',
                             id: 1,
                             description: 'Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.',
-                            image: 'https://live.staticflickr.com//65535//49347123322_291c86b016.jpg',
+                            image: 'https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg',
                             audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
                         },
                         {

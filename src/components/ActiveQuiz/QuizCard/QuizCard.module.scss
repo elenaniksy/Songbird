@@ -51,6 +51,30 @@
   padding: 15px;
 }
 
+@media (max-width: 560px) {
+  .QuizCard {
+    margin: 0;
+  }
+
+  .QuizCard .ActiveQuizCard {
+    flex-direction: column;
+  }
+
+  .QuizCard .Information {
+    text-align: center;
+    width: 100%;
+  }
+
+  .QuizCard .Information > audio {
+    max-width: 100%;
+  }
+
+  .Description {
+    text-align: justify;
+  }
+
+}
+
 
 
 

@@ -5,17 +5,26 @@ import Button from "../../UI/Button/Button";
 const FinishedQuiz = props => {
     return (
         <div className={classes.FinishedQuiz}>
-            <h1>Поздравляем!</h1>
-            <p>
-                Вы прошли викторину и набрали {props.score} из {props.maxscore} возможных баллов
-            </p>
+            <div className={classes.Wrapper}>
+                <h1>Поздравляем!</h1>
+                <p>
+                    Вы прошли викторину и набрали {props.score} из {props.maxscore} возможных баллов
+                </p>
 
-            <Button
-            rigthAnswer={props.rightAnswer}
-            >
-                Попробовать ещё раз!
-            </Button>
+                {
+                    props.score < props.maxscore
+                        ?
+                        <Button
+                            type={'primary'}
+                            rigthAnswer={props.rightAnswer}
+                            onClick={props.onRetry}
+                        >
+                            Попробовать ещё раз!
+                        </Button>
+                        : null
 
+                }
+            </div>
         </div>
     )
 }
