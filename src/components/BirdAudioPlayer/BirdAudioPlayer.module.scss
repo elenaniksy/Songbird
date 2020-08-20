@@ -6,13 +6,13 @@
   flex-grow: 1;
   padding: 20px;
   border-radius: 5px;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 
 .BirdAudioPlayer .Image > img{
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
 }
 
 .BirdAudioPlayer .Player {
@@ -41,6 +41,7 @@
 @media (max-width: 600px) {
   .BirdAudioPlayer {
     flex-direction: column;
+    padding: 0;
   }
 
   .BirdAudioPlayer .Image {

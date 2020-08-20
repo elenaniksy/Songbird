@@ -6,11 +6,11 @@
   flex-grow: 1;
   padding: 20px;
   border-radius: 5px;
-  margin: 25px 0; }
+  margin: 20px 0; }
 
 .BirdAudioPlayer .Image > img {
   width: 100%;
-  max-width: 250px; }
+  max-width: 200px; }
 
 .BirdAudioPlayer .Player {
   display: flex;
@@ -32,7 +32,8 @@
 
 @media (max-width: 600px) {
   .BirdAudioPlayer {
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 0; }
 
   .BirdAudioPlayer .Image {
     display: flex;
@@ -43,6 +44,6 @@
     padding: 0; }
 
   .BirdAudioPlayer h2 {
-    font-size: 25px; } }
+    font-size: 30px; } }
 
 /*# sourceMappingURL=BirdAudioPlayer.module.css.map */
