@@ -22,7 +22,6 @@ class Quiz extends Component {
             answerState: null, //{[name]: 'success' Vs 'error'}
             result: null, // {[key] : bird property},
             rightAnswer: false,
-            currentTime: 0
         }
     }
 
@@ -43,7 +42,7 @@ class Quiz extends Component {
                         latin: this.state.randomItem.latin,
                         description: this.state.randomItem.description,
                     }
-                });
+                })
 
             } else {
                 this.setState({
@@ -56,7 +55,7 @@ class Quiz extends Component {
                         audio: birdItem.audio,
                         description: birdItem.description
                     }
-                });
+                })
             }
         } else {
             return;
@@ -78,10 +77,9 @@ class Quiz extends Component {
             }
         } else {
             this.setState({
-               isFinished: true
+                isFinished: true
             });
         }
-
     }
 
     isQuizFinished () {
@@ -102,8 +100,17 @@ class Quiz extends Component {
         });
     }
 
-        render() {
+    buttonClickHandler = () => {
+        if(!this.state.isFinished) {
+            return this.nextLevelHandler();
+        } else {
+            return this.retryHandler();
+        }
+    }
 
+
+
+        render() {
             return (
                 <div className={classes.Quiz}>
                     <Header
@@ -118,7 +125,7 @@ class Quiz extends Component {
                                 score={this.state.score}
                                 maxscore={this.state.maxScore}
                                 rightAnswer={this.state.rightAnswer}
-                                onRetry={this.retryHandler()}
+                                onClick={this.buttonClickHandler}
                             /> :
                           <div>
                             <BirdAudioPlayer
@@ -139,7 +146,7 @@ class Quiz extends Component {
 
                             <Button
                             rigthAnswer={this.state.rightAnswer}
-                            nextLevel={this.nextLevelHandler}
+                            onClick={this.buttonClickHandler}
                             > Next Level
                             </Button>
                           </div>

@@ -15,9 +15,8 @@ const FinishedQuiz = props => {
                     props.score < props.maxscore
                         ?
                         <Button
-                            type={'primary'}
                             rigthAnswer={props.rightAnswer}
-                            onClick={props.onRetry}
+                            onClick={props.onClick}
                         >
                             Попробовать ещё раз!
                         </Button>
