@@ -1,0 +1,30 @@
+.QuizItem {
+  padding: 10px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.QuizItem::before {
+  content: '\2022';
+  color: rgba(255, 255, 255, .2);
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+//.QuizItem:hover{
+//  background: rgba(255, 255, 255, .2);
+//  transition: background .3s ease-in-out;
+//  border-radius: 10px;
+//}
+
+.QuizItem.success {
+  background-color: #00BC8C;
+}
+
+.QuizItem.error {
+  background: #D62C1A;
+}
+
+

@@ -1,0 +1,24 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 1000px; }
+
+.topPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.logo {
+  display: flex; }
+
+.logo img {
+  width: 100%;
+  max-width: 200px; }
+
+h5 {
+  display: flex;
+  font-size: 20px; }
+
+/*# sourceMappingURL=Header.module.css.map */

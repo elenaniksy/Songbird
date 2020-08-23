@@ -1,0 +1,8 @@
+.Quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=Quiz.module.css.map */

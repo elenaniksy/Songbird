@@ -1,0 +1,14 @@
+.ActiveQuiz {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10px;
+}
+
+
+@media(max-width: 560px) {
+  .ActiveQuiz{
+    flex-direction: column;
+    justify-content: center;
+  }
+}

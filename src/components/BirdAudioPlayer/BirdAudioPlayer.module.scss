@@ -1,0 +1,59 @@
+.BirdAudioPlayer {
+  color: #fff;
+  background-color: #303030;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+
+.BirdAudioPlayer .Image > img{
+  width: 100%;
+  max-width: 200px;
+}
+
+.BirdAudioPlayer .Player {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.BirdAudioPlayer .Player > ul {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.BirdAudioPlayer .Player li:nth-child(1) {
+  border-bottom: 1px solid #444;
+}
+
+.BirdAudioPlayer h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .BirdAudioPlayer {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .BirdAudioPlayer .Image {
+    display: flex;
+    justify-content: center;
+  }
+  .BirdAudioPlayer .Player > ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  .BirdAudioPlayer h2 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,17 @@
+.FinishedQuiz {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.FinishedQuiz h1 {
+  font-size: 25px;
+}
+
+.FinishedQuiz .Wrapper {
+  background-color: #303030;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0;
+}
