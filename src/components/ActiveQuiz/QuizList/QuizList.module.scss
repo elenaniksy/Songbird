@@ -8,4 +8,23 @@
   border-radius: 10px;
   padding: 0;
   list-style: none;
+  height: max-content;
+}
+.QuizList li:nth-child(-n+5){
+  border-bottom: 1px solid #444;
+}
+.QuizList:last-child {
+  border-bottom: none;
+}
+.QuizList li:hover{
+  background: rgba(255, 255, 255, .2);
+  transition: background .3s ease-in-out;
+}
+.QuizList li:first-child:hover {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.QuizList li:last-child:hover {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

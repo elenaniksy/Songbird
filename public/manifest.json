@@ -1,21 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SongBird",
+  "name": "SongBird Quiz",
   "icons": [
     {
       "src": "icons8.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "24x24",
       "type": "image/x-icon"
-    },
-    {
-      "src": "icons8.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icons8.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "start_url": ".",

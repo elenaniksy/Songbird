@@ -1,7 +1,6 @@
 .QuizItem {
   padding: 10px;
   font-weight: lighter;
-  //border-bottom: 1px solid #444;
   cursor: pointer;
 }
 
@@ -14,10 +13,11 @@
   margin: 0 10px;
 }
 
-.QuizItem:hover{
-  background: rgba(255, 255, 255, .2);
-  transition: background .3s ease-in-out;
-}
+//.QuizItem:hover{
+//  background: rgba(255, 255, 255, .2);
+//  transition: background .3s ease-in-out;
+//  border-radius: 10px;
+//}
 
 .QuizItem.success {
   background-color: #00BC8C;

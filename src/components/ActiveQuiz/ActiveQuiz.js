@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './ActiveQuiz.module.scss';
 import QuizList from "./QuizList/QuizList";
 import QuizCard from "./QuizCard/QuizCard";
-import Button from "../../UI/Button/Button";
 
 const ActiveQuiz = props => {
 
